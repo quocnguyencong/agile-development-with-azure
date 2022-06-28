@@ -5,8 +5,8 @@ def setup_function(function):
   function.x = 10
   
 def teardown_function(function):
-  print("Running teardown: " % function.__name__)
-  def function.x
+  print("Running teardown: %s" % function.__name__)
+  del function.x
   
 ### Run to see failed test
 #def test_hello_add():
