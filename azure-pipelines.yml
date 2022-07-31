@@ -8,8 +8,8 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  #azureServiceConnectionId: 'caaf9545-0642-4d61-9fdb-4e45f9e0fd23'
-  azureServiceConnectionId: 'housing-prediction-flask-app-service'
+  azureServiceConnectionId: 'caaf9545-0642-4d61-9fdb-4e45f9e0fd23'
+  #azureServiceConnectionId: 'housing-prediction-flask-app-service'
 
   # Web app name
   webAppName: 'housing-prediction-flask-app'
@@ -32,7 +32,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      vmImage: $(vmImageName)
+      vmImage: 'ubuntu-latest' #$(vmImageName)
     steps:
     - task: UsePythonVersion@0
       inputs:
