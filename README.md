@@ -3,25 +3,45 @@
 In this project, you will build a Github repository from scratch and create a scaffolding that will assist you in performing both Continuous Integration and Continuous Delivery. You'll use Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle. Next, you'll integrate this project with Azure Pipelines to enable Continuous Delivery to Azure App Service
 
 ## Project Plan
-<TODO: Project Plan
 
 * A link to a Trello board for the project
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+* Architectural Diagram
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/building-a-ci-cd-pipeline.png)
+
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
-* Project running on Azure App Service
+* Setup Azure CLI
+- Login https://portal.azure.com/ and go to cloud shell
+- Create a ssh key to use for github authentication
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/ssh-keygen.PNG)
+- Add public key to github: https://github.com/settings/profile > SSH and GPG keys > new SSH key, add content of file id_rsa.pub to the textbox and save
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/add%20ssh%20key%20to%20git.PNG)
 
 * Project cloned into Azure Cloud Shell
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/clone%20git%20project%20from%20azure%20CLI.PNG)
+
+* Create the Python Virtual Environment
+Inside your Azure Cloud Shell environment create a Python virtual environment to run the project
+```bash
+cd agile-development-with-azure
+python3 -m venv ~/.agile-development-with-azure
+source ~/.agile-development-with-azure/bin/activate
+```
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/run-make-all.PNG)
 
-* Output of a test run
+* Run application in local
+```bash
+export FLASK_APP=app.py
+flask run
+```
+
+
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
