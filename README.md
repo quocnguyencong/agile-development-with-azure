@@ -41,6 +41,40 @@ export FLASK_APP=app.py
 flask run
 ```
 
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/flask-app-localhost-running.png)
+
+* Verify local host is running well by using below commandline. Be make sure your localhost port same with PORT variable in make-predition.sh file
+```bash
+./make-predition.sh
+```
+note: if you face with error "Permission Denied". You need to gand permission execute in make-prediton.sh by using command below
+```bash
+chmod +xr ./make-predition.sh
+```
+
+
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/flask-app-test-localhost-api.png)
+
+# Deploy this application to azure app services
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/az-webapp-up.png)
+
+* Verify the site is running
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/web-app-home.png)
+
+* Verify the API
+1. Change API url in file make_predict_azure_app.sh
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/change-make-predict-azure.png)
+2. Execute command in file make_predict_azure_app.sh
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/execute-make-predict-azure.png)
+
+## Configure GitHub Actions
+* You will configure GitHub Actions to test your project upon change events in GitHub. This is a necessary step to perform Continuous Integration remotely
+* To enable github action: go to your repo > Actions tab > New workflow > chose Python application > a yml file generated
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/create%20git%20workflow%20for%20python%20app.png)
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/edit%20git%20workflow.png)
+* Edit with step as your exptected and run this workflow
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/github-action-test.PNG)
+
 
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
