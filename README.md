@@ -4,7 +4,7 @@ In this project, you will build a Github repository from scratch and create a sc
 
 ## Project Plan
 
-* A link to a Trello board for the project
+* [Trello board](https://trello.com/b/GyznwqWu/housing-prediction-flask-app)
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
@@ -125,7 +125,9 @@ chmod +xr ./make-predition.sh
 ![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/dev.azure.com-setup-billing.png)
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/dev.azure.com-job-run-success.png)
+
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/dev.azure.com-job-run-success.png)
+
 
 **Note:** For now, any change on main branch of this repo will trigger the azure pipeline to deploy the change to azure App services
 
