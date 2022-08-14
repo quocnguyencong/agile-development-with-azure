@@ -133,7 +133,8 @@ chmod +xr ./make-predition.sh
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+* Refactor and structure code (find a good framework to apply)
+* Apply micro service
 
 ## Demo 
 
