@@ -5,7 +5,7 @@ In this project, you will build a Github repository from scratch and create a sc
 ## Project Plan
 
 * [Trello board](https://trello.com/b/GyznwqWu/housing-prediction-flask-app)
-* A link to a spreadsheet that includes the original and final project plan>
+* [Spreadsheeet Project Plan](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/project-management-plan.xlsx)
 
 ## Instructions
 
