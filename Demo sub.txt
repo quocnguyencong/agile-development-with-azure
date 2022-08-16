@@ -1,0 +1,53 @@
+Hi,
+In this video, I'll show you how to deploy a python web application to azure automaticaly using azure pipeline
+- This is architectural diagram for this project.
+	- First, we start with github source control and cloud shell
+	- Second, Continuous Integration, we will set up github action Testing and Linting
+	- Third, Continuous Delivery, we will setup azure pipeline to deploy application to azure app service
+	- Fourth, Verify azure app service and Flask ML API
+
+Now, follow in readme file. I will go through step by step
+
+Step 1. Setup Azure CLI
+	- Go to portal.azure.com and click on cloud shell icon. If you never access this before, azure will take you to some steps to setup Azure Storage first.
+	- Create SSH key, using commandline here to create ssh key
+	- Add ssh public key to github account
+	- clone repo using https method
+	- Create python virtual env 
+		python3 -m venv ~/.agile-development-with-azure
+		source ~/.agile-development-with-azure/bin/activate
+	- cd to repo folder and run commandline "make all". The commandline in Makefile will be running => output will display on console screen
+	- To run flask app in local, we set FLASK_APP variable to start file, in our case is app.py and run commandline "flask run"
+	- Check on console we will see flask app runing in localhost and port 5000 (five thousan)
+	- To verify flask API, we using file make_prediction.sh (Open this file and change the port variable to 5000, same with the port flask app runing and trigger post in console)
+
+Step 2. Deploy this application to azure app services
+	- using commandline "az webapp up -n housing-prediction-flask-app --resource-group AzureDevops
+	- housing-prediction-flask-app: this is name of the web site
+	- AzureDevops: this is name of resource group will contain  all resource will be created for this site
+	- after below command success, open new tab and type on url housing-prediction-flask-app.azurewebsites.net
+	- The content of the site will be displayed
+	- verify flask app API: we using file make_predict_azure_app.sh.
+	- Update url to point to our site created below and execute this file in commandline.
+	- We may be face with error: Permission denied. In this case we need to assign permission execute for this file using commandline chmod +xr file name, then try to execute the file again.
+	- If no error, we will get the result like this
+
+Step 3: Config github action.
+	- To enable github action: go to your repo > Actions tab > New workflow > chose Python application > a yml file generated
+	- Edit yml file with setep we want to run and click button save and run.
+	- See your output and check/fix error if any
+
+Step 4. Deploy application to azure using azure pipline
+	- Login to dev.azure.com same account with portal.azure.com and create a project
+	- Go inside project, we will see project settings. In project settings, we will create Service connections using for pipline to connect to azure
+	- Click Create service connection > select azure resource manager > in Scope level select "Subscription" > select Resource group > name for service connection > and check on check box Grant access permission to all piplines => see result
+	- Create pipelines: in connect tab chose GitHub Yaml > Select repo > Select Python to Linux Web app on Azure > select azure subscription > Review pipeline and click "save and run"
+	- First, I face with some error about permission. I have searched on google and found answers.
+	- I have tried using selfhost on azure VM, but lot of error appear and I cannot fixed.
+	- In my account, I need to hardcode vmImage instead of variable
+	- Setup billing for dev Organization Setting to use Microsoft-hosted agents
+	- After that, the pipeline is working well.
+	- See result.
+
+
+
