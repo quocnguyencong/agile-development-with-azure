@@ -45,7 +45,7 @@ flask run
 ```bash
 ./make-predition.sh
 ```
-**Note:** if you face with error "Permission Denied". You need to gand permission execute in make-prediton.sh by using command below
+**Note:** if you face with error "Permission Denied". You need to grant permission execute in make-prediton.sh by using command below
 ```bash
 chmod +xr ./make-predition.sh
 ```
