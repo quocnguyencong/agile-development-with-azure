@@ -138,7 +138,7 @@ chmod +xr ./make-predition.sh
 
 ## Demo 
 
-![https://youtu.be/yN7Ong4T_LA](https://youtu.be/yN7Ong4T_LA)
+https://youtu.be/yN7Ong4T_LA
 
 
 
