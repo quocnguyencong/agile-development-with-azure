@@ -30,7 +30,7 @@ chmod +xr ./make_prediction.sh
 ./make_prediction.sh
 
 # Create a resource group if you have not created yet
-az group create --l eastasia --n udacity-resource-group-test
+az group create -l eastasia -n udacity-resource-group-test
 
 # Deploy app to Azure App Services
 az webapp up -n housing-predition-flask-app --resource-group udacity-resource-group-test
