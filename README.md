@@ -44,11 +44,11 @@ flask run
 
 * Verify local host is running well by using below commandline. Be make sure your localhost port same with PORT variable in make-predition.sh file
 ```bash
-./make-predition.sh
+./make_predition.sh
 ```
 **Note:** if you face with error "Permission Denied". You need to grant permission execute in make-prediton.sh by using command below
 ```bash
-chmod +xr ./make-predition.sh
+chmod +xr ./make_predition.sh
 ```
 
 ![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/flask-app-test-localhost-api.png)
