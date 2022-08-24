@@ -1,3 +1,4 @@
+[![Python application test with Github Actions](https://github.com/quocnguyencong/agile-development-with-azure/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)](https://github.com/quocnguyencong/agile-development-with-azure/actions)
 # Overview
 
 In this project, you will build a Github repository from scratch and create a scaffolding that will assist you in performing both Continuous Integration and Continuous Delivery. You'll use Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle. Next, you'll integrate this project with Azure Pipelines to enable Continuous Delivery to Azure App Service
