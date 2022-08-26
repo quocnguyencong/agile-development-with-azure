@@ -67,6 +67,14 @@ chmod +xr ./make_predition.sh
 
 ![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/execute-make-predict-azure.png)
 
+# Load test using Locust
+###### Run locust
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/locust-cmd.png)
+###### Input load test paramter
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/locust-settings.png)
+###### Load test result
+![alt text](https://github.com/quocnguyencong/agile-development-with-azure/blob/main/screen-shot/locust-result.png)
+
 ## Configure GitHub Actions
 * You will configure GitHub Actions to test your project upon change events in GitHub. This is a necessary step to perform Continuous Integration remotely
 * To enable github action: go to your repo > Actions tab > New workflow > chose Python application > a yml file generated
